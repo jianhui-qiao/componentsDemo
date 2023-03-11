@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body {
+            background-color: #000;
+        }
+
+        .box {
+            background: url('static/image.png');
+            /* 图片的大小是 300 * 300 的 */
+            width: 300px;
+            height: 300px;
+            /* 第一个值是雪碧图的宽度, 第二个值是雪碧图的高 */
+            background-size: 5100px 300px;
+            -webkit-animation: demo 3s steps(17) infinite;
+        }
+
+        @-webkit-keyframes demo {
+            0% {
+                background-position: 0 0
+            }
+
+            100% {
+                /* 第一个值 是 x 轴移动的值 */
+                /* 第二个值 是 y 轴移动的值 */
+                /* 因为动画是从右向左移动, 所以值为负数 */
+                background-position: -5100px 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    </div>
+</body>
+
+</html>
